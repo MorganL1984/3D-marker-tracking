@@ -11,14 +11,20 @@ A MATLAB script to track markers from multiple cameras, triangulate to 3D world 
     * Mention any caveats and assumptions that were considered  
 -->  
 Codes (run in steps):
+
 STEP01_extract_marker.m: extract marker pixel locations in each camera image, and save to marker_data/[filename]_marker_pos.mat
+
 STEP02_marker_world_coord.m: triangulate marker pixel locations from multiple cameras to 3D world coordinates using pinhole camera model, and save marker world coordinates to marker_data/[filename]_marker_coord.mat
+
 STEP03_image2CAD.m: determine the orientation of the object by matching marker world coordinates to known marker locations
 
 Folders:
+
 pitching_wing_5hz: 100 images of a pitching wing with markers. Each .tiff contains images taken at the same time instance by 3 cameras, stacked vertically. The images are 12-bit.
 cam_calib_data: cam_calib.mat contains pinhole camera model parameters for the 3 cameras.
+
 aerofoil_data: .mat file contains ground truth marker location in 3D world coordinate in mm
+
 marker_data: contains intermediate marker pixel location and world coordinate data generated in STEP01 and STEP02.
 
 
